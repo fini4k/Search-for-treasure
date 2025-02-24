@@ -1,6 +1,8 @@
+// showprim.cpp
+// изображает распределение простых чисел
 #include <iostream>
 using namespace std;
-#include <conio.h> 
+#include <conio.h> // для _getch()
 
 int main()
 {
@@ -9,6 +11,9 @@ int main()
 	while (dir != '\r')
 	{
 		cout << "\nВаши координаты: " << x << ", " << y;
+		if (x < 5 || x>15)
+			cout << "\n Осторожно драконы!";
+	
 		cout << "\nВыберите напрваление (n,s,e,w): ";
 		dir = _getche();
 		switch (dir) {
@@ -24,8 +29,6 @@ int main()
 		}
 	}
 }
-
-
 
 
 
